@@ -1,0 +1,2 @@
+
+A small node js script that reads the files and gathers them into a single file. This is a very basic node script. I had to gather all the files in a shorter time so I have spent 1 hour to write this script and then combining the files in a second. What a pleasure !!! <3
