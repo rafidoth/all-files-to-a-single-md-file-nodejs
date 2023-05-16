@@ -21,9 +21,11 @@ const fileReader = (file)=>{
 
 const outputFile = "result.md";
 const fileWriter = (data)=>{
-    fs.writeFile(outputFile, data,(error)=>{
-        if(error) reject(error);
-    });
+    return new Promise((resolve,reject)=>{
+        fs.writeFile(outputFile, data,(error)=>{
+            if(error) reject(error);
+        });
+    })
 }
 
 
@@ -37,7 +39,7 @@ const processResult = async ()=>{
         result+=finalString;
     }
     console.log(result);
-    fileWriter(result);
+    await fileWriter(result);
 }
 
 processResult();
